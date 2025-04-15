@@ -1,0 +1,122 @@
+/* Product grid page styles */
+
+.product-grid-page {
+  padding: $spacing-xl 0;
+}
+
+.breadcrumbs-container {
+  background-color: $color-gray-100;
+  padding: $spacing-sm 0;
+  margin-bottom: $spacing-xl;
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: $spacing-xl;
+  
+  @include respond-to(lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filters-sidebar {
+  padding-right: $spacing-lg;
+  
+  @include respond-to(lg) {
+    padding-right: 0;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.products-header {
+  @include flex(row, space-between, center);
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
+  border-bottom: $border-width solid $color-gray-200;
+  
+  .products-count {
+    color: $color-gray-600;
+  }
+  
+  .products-sort {
+    @include flex(row, flex-end, center);
+    
+    label {
+      margin-right: $spacing-sm;
+      margin-bottom: 0;
+    }
+    
+    .sort-select {
+      padding: $spacing-xs $spacing-lg $spacing-xs $spacing-sm;
+      border: $border-width solid $color-gray-300;
+      border-radius: $border-radius-sm;
+      background-color: $color-light;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right $spacing-xs center;
+      background-size: 16px;
+    }
+  }
+  
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .products-count {
+      margin-bottom: $spacing-sm;
+    }
+    
+    .products-sort {
+      width: 100%;
+      
+      .sort-select {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.products-grid {
+  @include grid(3, $spacing-lg);
+  margin-bottom: $spacing-xl;
+  
+  @include respond-to(lg) {
+    @include grid(3, $spacing-md);
+  }
+  
+  @include respond-to(md) {
+    @include grid(2, $spacing-md);
+  }
+  
+  @include respond-to(sm) {
+    @include grid(1, $spacing-md);
+  }
+}
+
+.empty-results {
+  text-align: center;
+  padding: $spacing-xl 0;
+  
+  h3 {
+    font-family: $font-secondary;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  p {
+    color: $color-gray-600;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.related-products {
+  padding: $spacing-section 0;
+  background-color: $color-gray-100;
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+}

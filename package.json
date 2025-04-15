@@ -1,0 +1,23 @@
+{
+  "name": "fashion-ecommerce",
+  "version": "1.0.0",
+  "description": "Modern fashion/lifestyle e-commerce website scaffold with GSAP animations",
+  "main": "js/main.js",
+  "scripts": {
+    "sass": "sass scss/main.scss:css/main.css",
+    "sass:watch": "sass scss/main.scss:css/main.css --watch",
+    "build": "sass scss/main.scss:css/main.css --style=compressed"
+  },
+  "keywords": [
+    "e-commerce",
+    "fashion",
+    "GSAP",
+    "animation",
+    "responsive"
+  ],
+  "author": "SERENE",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
